@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(../Fonts/Inter-VariableFont_slnt\,wght.ttf)
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(../Fonts/RubikMonoOne-Regular.ttf)
+}
+.footer {
+    display: flex;
+    position: absolute;
+    margin-top: 1800px;
+    width: 1000px;
+    height: 100px;
+    background: linear-gradient(to right, #EBD9EA, #AD45A8);
+    justify-content: center;
+    align-items: center;
+}
+.footer-text{
+    margin-left: 60px;
+    color: #550073;
+    font-size: 22px;
+    text-decoration: none;
+}

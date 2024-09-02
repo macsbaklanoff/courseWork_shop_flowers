@@ -1,0 +1,2 @@
+DELETE FROM "Букет";
+COPY "Букет" FROM 'D:\krflowers\data-base-flowers\запись_букет.txt' ENCODING 'WIN1251' HEADER DELIMITER E'\t' NULL AS 'NULL';

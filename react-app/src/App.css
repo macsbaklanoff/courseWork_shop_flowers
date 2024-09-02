@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+.backgroundapp {
+  display: flex;
+  width: 100vw;
+  height: 1900px;
+  opacity: 0.33;
+}
+

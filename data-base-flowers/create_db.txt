@@ -1,0 +1,9 @@
+DROP DATABASE "Flowers" WITH (FORCE);
+CREATE DATABASE "Flowers" 
+    WITH
+    OWNER = postgres
+    TEMPLATE = template0
+    ENCODING = 'WIN1251'
+    LOCALE_PROVIDER = 'libc'
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;

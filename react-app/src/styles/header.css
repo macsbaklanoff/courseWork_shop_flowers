@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(../Fonts/Inter-VariableFont_slnt\,wght.ttf)
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(../Fonts/RubikMonoOne-Regular.ttf)
+}
+.App-header{
+    display: flex;
+    width: 1000px;
+    height: auto;
+    background: linear-gradient(to right, #FADCFF, #ED81FF);
+    position: absolute;
+}
+.App-header-left {
+    display: flex;
+    flex-direction: column;
+}
+.logo-header {
+    display: flex;
+    width: 125px;
+    height: 125px;
+}
+.App-text-header-left {
+    font-size: 30px;
+    font-family: 'Inter';
+    font-weight: 800;
+    color: #550073;
+    text-decoration: none;
+}
+.App-header-right {
+    display: flex;
+}
+.text-app-header-right {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 35px;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 20px;
+    color:#550073;
+    text-decoration: none;
+}
+.banner {
+    margin-top: 225px;
+    position: absolute;
+    margin-right: 1000px;
+}
+.banner-image {
+    display: flex;
+    width: 1000px;
+    position: absolute;    
+}
+.text-banner{
+    color: #FFFFFF;
+    top: 75px;
+    left: 250px;
+    position: absolute;
+    white-space: nowrap;
+    font-family: 'Inter';
+    font-size: 40px;
+    font-weight: 800;
+}

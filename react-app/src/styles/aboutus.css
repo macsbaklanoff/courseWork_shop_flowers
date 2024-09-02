@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(../Fonts/Inter-VariableFont_slnt\,wght.ttf)
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(../Fonts/RubikMonoOne-Regular.ttf)
+}
+.about-us{
+    display: flex;
+    position: absolute;
+    margin-top: 480px;
+}
+.about-us-left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 350px;
+}
+.text-about-us-h {
+    font-family: 'Inter';
+    font-size: 40px;
+    color: #550073;
+}
+.text-about-us-l {
+    font-family: 'Inter';
+    font-size: 23px;
+    color: #550073;
+}
+.about-us-right {
+    margin-right: 330px;
+}
+.images-about-us {
+    height: 800px;
+}

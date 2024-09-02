@@ -1,0 +1,18 @@
+DROP SCHEMA public CASCADE;
+CREATE SCHEMA public;
+CREATE TABLE "Букет" (
+	"Идентификатор букета" bigserial,
+	"Наименование" text,
+	"URL" text,
+	"Цена" int,
+	PRIMARY KEY ("Идентификатор букета")	
+);
+
+CREATE TABLE "Товар"(
+	"Идентификатор товара" bigserial,
+	"Наименование" text,
+	"URL" text,
+	"Цена" int,
+	PRIMARY KEY ("Идентификатор товара")	
+);
+

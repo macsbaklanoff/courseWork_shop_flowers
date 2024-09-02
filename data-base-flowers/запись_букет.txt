@@ -1,0 +1,11 @@
+Идентификатор букета	Наименование	URL	Цена
+1	Фрида Кало	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/0a/d9/_d7e2a760c538a57ba24b3a580f91/800x800/64219269db98a.jpg	6460
+2	Тюльпаны Микс	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/iflorist/product/O/V/_dPZ3A4SWxNeDhsZ2pKd0RLVFUyVHprYnliVjdxSGo1eE42bFVlOE9FZTFOYnJYbDNoRktYZStLQUs2OG13a2NKVFREdHFoVXovb2NoUVVWU0VjQ3RuNWVhR2JLZlFBU045aC9hdFJjazc1MEkrczNZTU5nVU5ZWFdTR25lWkR3Um1KaVhoQlpHbzZBNE5KdG10T0pBPT0=/800x800/img.jpg	3938
+3	Премиальные Пионы	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/da/08/_88f54ba039305ae61dcaeed7ff0d/800x800/63c680c5e6723.jpg	6650
+4	101 Рубиновая Роза	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/80/e6/_cb4fa97ac146294b81cf047f7fc9/800x800/63f4b0fe6b337.jpg	6990
+5	Солнце Портфонино	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/04/55/_cd03d62b839fae1b1cdfb10375b5/800x800/647eef0376958.jpg	4500
+6	Персиковый Жемчуг	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/6b/d2/_0549af1267086ab896970aa7d790/800x800/647da152ed3f7.jpg	6690
+7	Амальфи	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/f5/bb/_44362c440dec02be4c5be9c3f15d/800x800/64a6a83e599d2.jpg	19690
+8	Малиновый Пудинг	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/9b/b7/_ee2ca5d54e6565ef0033a27ac450/800x800/647d9090ac409.jpg	5590
+9	Облако из гортензии	_dPZ3A4SWxNeDhsZ2pKd0RLVFUyVHprYnliVjdxSGo1eE42bFVlOE9FZTFOYnJYbDNoRktYZStLQUs2OG13a2QvZEx1M3FBUG5hS3VoRVZQR1dEN0xPOXdBbGNLT0pOcjhBaStZdkZIMVFuOS9YNDdJVkV3NTNsT2pGeUFTeU53Um1KaVhoQlpHbzZBNE5KdG10T0pBPT0	7340
+10	Небесный сапфир	_dPZ3A4SWxNeDhsZ2pKd0RLVFUyVHprYnliVjdxSGo1eE42bFVlOE9FZTFOYnJYbDNoRktYZStLQUs2OG13a3lmMXllN01QR3JTN1p6SzFMa3dobGlWM0YrclRpNFcweUhna1BqVEpZaUpHLzg5cEl3d0k1eFkrVXN0UlN3QzZ3Um1KaVhoQlpHbzZBNE5KdG10T0pBPT0	3750
