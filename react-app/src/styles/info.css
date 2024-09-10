@@ -9,8 +9,6 @@
 .info{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    margin-top: 1500px;
 }
 .button-see-all{
     background-color: #AF65AC;

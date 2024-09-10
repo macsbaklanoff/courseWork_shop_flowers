@@ -15,15 +15,14 @@ import Constructor from "./pages/constructor";
 function App() {
   return (
     <div className="App">
-       <img className = "backgroundapp" src = {backgroundapp}/>
       <header className="App-header">
         <div className = "App-header-left">
           <img className = "logo-header" src = {logo}/>
           <Link to = "/" className = "App-text-header-left">ЦВЕТОК</Link>
         </div>
         <div className = "App-header-right">
-          <Link to = "/about" className = "text-app-header-right">О нас</Link>
           <Link to = "/" className = "text-app-header-right">Каталог</Link>
+          <Link to = "/about" className = "text-app-header-right">О нас</Link>
           <Link to = "/soptov" className = "text-app-header-right">Сопутствующие товары</Link>
           <a className = "text-app-header-right">Аккаунт</a>
           <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
@@ -38,6 +37,7 @@ function App() {
           <Route path = "/about" element = {<About/>}/>
           <Route path = "/soptov" element = {<Soptovars/>}/>
           <Route path = "/constructor" element = {<Constructor/>}/>
+          <Route path = "/product" element = {<Product/>}/>
           
         </Routes>
         <div className = "info">

@@ -1,3 +1,46 @@
-.flowers-app {
-    
+.main-app-flowers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+    height: auto;
+    grid-gap: 70px;
+    margin-top: 40px;
+    margin-right: 100px;
+    margin-left: 60px;
+}
+
+.one-flowers {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    background-color: #FFD3FD;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+}
+.image-one-flower {
+    width: 220px;
+}
+.text-main-name-flower {
+    color: #550073;
+    font-family: "Inter";
+    font-size: 17px;
+}
+.button {
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    border-radius: 20px;
+    background-color: #AF65AC;
+}
+.button-buy-in-main-content-catalog {
+    display: flex;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
 }

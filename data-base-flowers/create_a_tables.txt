@@ -5,6 +5,7 @@ CREATE TABLE "Букет" (
 	"Наименование" text,
 	"URL" text,
 	"Цена" int,
+	"Количество" int,
 	PRIMARY KEY ("Идентификатор букета")	
 );
 

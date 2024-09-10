@@ -10,8 +10,7 @@
     display: flex;
     width: 1000px;
     height: auto;
-    background: linear-gradient(to right, #FADCFF, #ED81FF);
-    position: absolute;
+
 }
 .App-header-left {
     display: flex;
@@ -31,10 +30,12 @@
 }
 .App-header-right {
     display: flex;
+    background-color: #e498ff;
+    border-radius: 50px;
 }
 .text-app-header-right {
     display: flex;
-    padding-top: 50px;
+    padding-top: 63px;
     padding-left: 35px;
     font-family: "Inter";
     font-weight: 500;
@@ -43,20 +44,18 @@
     text-decoration: none;
 }
 .banner {
-    margin-top: 225px;
-    position: absolute;
-    margin-right: 1000px;
+    margin-top: 50px;
 }
 .banner-image {
     display: flex;
     width: 1000px;
-    position: absolute;    
+    position: relative;
 }
 .text-banner{
-    color: #FFFFFF;
-    top: 75px;
-    left: 250px;
     position: absolute;
+    color: #ffffff;
+    top: 290px;
+    left: 700px;
     white-space: nowrap;
     font-family: 'Inter';
     font-size: 40px;

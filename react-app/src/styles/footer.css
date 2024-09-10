@@ -8,8 +8,7 @@
 }
 .footer {
     display: flex;
-    position: absolute;
-    margin-top: 1800px;
+    margin-top: 50px;
     width: 1000px;
     height: 100px;
     background: linear-gradient(to right, #EBD9EA, #AD45A8);

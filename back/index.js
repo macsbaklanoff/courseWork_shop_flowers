@@ -22,7 +22,6 @@ const connectForFlowers = new Pool({
 let dataTable = []
 const getTalbeFlowers = async () => {
     dataTable = await connectForFlowers.query('SELECT * FROM "Букет";')
-    console.log(dataTable.rows[0])
 }
 getTalbeFlowers()
 app.get('/get', (req, res) => {

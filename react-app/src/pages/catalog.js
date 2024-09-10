@@ -1,8 +1,9 @@
 import '../styles/catalog.css';
-import pictmain from './katalog-pict.png';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { type } from '@testing-library/user-event/dist/type';
+import {Route, Routes, Link} from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { setFlower } from '../store/actions/action_1';
 
 function Catalog() {
     
@@ -17,13 +18,20 @@ function Catalog() {
         console.error('Error fetching data:', error);
         });
         }, []);
+        const dispatch = useDispatch();
     return (
         <div className='flowers-app'>
             <div className='main-app-flowers'>
                 {
                     dataFlowers && dataFlowers.map(flower => (
                      <div className='one-flowers'>
-                        {console.log(flower)}
+                        <img className = 'image-one-flower' src = {flower['URL']}></img>
+                        <p className = 'text-main-name-flower'>{flower['Наименование']}</p>
+                        <p className = 'text-main-name-flower'>Кол-во: {flower['Количество']}</p>
+                        <p className = "text-main-content-one">{flower['Цена']}</p>
+                        <div className='button'>
+                            <Link to = "/product" className = 'button-buy-in-main-content-catalog' onClick={() => dispatch(setFlower(flower))}>Купить</Link>
+                        </div>
                      </div>   
                     ))
                 }
