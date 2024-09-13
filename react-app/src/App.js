@@ -8,9 +8,11 @@ import logo from './rose.png';
 import banner from './banner.png'
 import Catalog from "./pages/catalog";
 import About from "./pages/about";
-import Soptovars from "./pages/sop-tovars";
+import CatalogRelatedProduct from "./pages/catalogRelatedProducts";
 import Product from "./pages/product";
 import Constructor from "./pages/constructor";
+import Bascet from "./pages/bascet";
+import RelatedProduct from './pages/relatedProduct';
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
         <div className = "App-header-right">
           <Link to = "/" className = "text-app-header-right">Каталог</Link>
           <Link to = "/about" className = "text-app-header-right">О нас</Link>
-          <Link to = "/soptov" className = "text-app-header-right">Сопутствующие товары</Link>
+          <Link to = "/catalogRelatedProduct" className = "text-app-header-right">Сопутствующие товары</Link>
           <a className = "text-app-header-right">Аккаунт</a>
           <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
         </div>
@@ -35,10 +37,11 @@ function App() {
         <Routes>
           <Route path = "/" element = {<Catalog/>}/>
           <Route path = "/about" element = {<About/>}/>
-          <Route path = "/soptov" element = {<Soptovars/>}/>
+          <Route path = "/catalogRelatedProduct" element = {<CatalogRelatedProduct/>}/>
           <Route path = "/constructor" element = {<Constructor/>}/>
           <Route path = "/product" element = {<Product/>}/>
-          
+          <Route path = "/bascet" element = {<Bascet/>}/>
+          <Route path = "/relatedProduct" element = {<RelatedProduct/>}/>
         </Routes>
         <div className = "info">
                     <button className='button-about-us'>

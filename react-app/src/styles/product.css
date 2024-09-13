@@ -1,3 +1,11 @@
+@font-face {
+	font-family: 'PTSans'; 
+	src: url(../Fonts/PTSans-Regular.ttf); 
+}
+@font-face {
+	font-family: 'PTSans-Italic'; 
+	src: url(../Fonts/PTSans-Italic.ttf); 
+}
 .product {
     display: flex;
     flex-direction: column;
@@ -6,13 +14,14 @@
 }
 .product-upper {
     display: flex;
-    width: 850px;
+    width: 870px;
     justify-content: space-between;
     margin-top: 50px;
 }
 .product-upper-left {
     display: flex;
     width: 500px;
+    border: 1px solid #000000;
 }
 .product-upper-right {
     display: flex;
@@ -21,19 +30,66 @@
     background-color: #FFD3FD;
     width: auto;
     height: auto;
+    border-radius: 20px;
 }
-.product-upper-right-lower {
-    display: flex;
-    width: 250px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-    background-color:  #AF65AC;
+
+.text-product {
+    color: hsl(315, 100%, 27%);
+    font-family: 'PTSans-Italic';
+    font-size: 20px;
+}
+.text-product-cost {
+    margin-top: 250px;
+    margin-left: 50px;
+    font-family: "PTSans-Italic";
+    color: hsl(315, 100%, 27%);
+    font-size: 30px;
 }
 .button-buy-product {
     display: flex;
-    color: #FFF;
     text-decoration: none;
     font-size: 23px;
     font-weight: 700;
+    border: none;
+    height: 50px;
+    background-color: #AF65AC;
+    border-radius: 20px;
+    color: #FFF;
+    width: 242px;
+    justify-content: center;
+}
+
+.product-lower { 
+    display: flex;
+    flex-direction: column;
+}
+.mini-catalog-products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: auto;
+    height: auto;
+    grid-gap: 70px;
+    margin-top: 40px;
+    margin-right: 100px;
+    margin-left: 60px;
+}
+.one-product {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    background-color: #FFD3FD;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+}
+.image-one-product {
+    display: flex;
+    width: 190px;
+}
+.text-main-name-product {
+    font-family: "PTSans-Italic";
+    font-size: 18px;
+    color:#AF65AC
 }

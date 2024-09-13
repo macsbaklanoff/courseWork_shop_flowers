@@ -19,13 +19,25 @@ const connectForFlowers = new Pool({
 });
 
 
-let dataTable = []
+let dataTableFlowers = []
+let dataTableRelatedProducts = []
+
 const getTalbeFlowers = async () => {
-    dataTable = await connectForFlowers.query('SELECT * FROM "Букет";')
+    dataTableFlowers = await connectForFlowers.query('SELECT * FROM "Букет";')
+}
+
+const getTableRelatedProducts = async () => {
+    dataTableRelatedProducts = await connectForFlowers.query('SELECT * FROM "Товар";')
 }
 getTalbeFlowers()
-app.get('/get', (req, res) => {
-    res.json(dataTable.rows)
+getTableRelatedProducts()
+
+app.get('/getFlowers', (req, res) => {
+    res.json(dataTableFlowers.rows)
+})
+
+app.get('/getRelatedProducts', (req, res) => {
+    res.json(dataTableRelatedProducts.rows)
 })
 
 app.listen(PORT, HOST, (error) => {

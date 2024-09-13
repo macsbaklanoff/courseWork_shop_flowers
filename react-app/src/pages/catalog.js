@@ -10,7 +10,7 @@ function Catalog() {
     const [dataFlowers, setDataFlowers] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:3001/get")
+        axios.get("http://localhost:3001/getFlowers")
         .then(response => {
             setDataFlowers(response.data);
         })
