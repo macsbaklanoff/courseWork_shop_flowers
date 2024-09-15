@@ -33,3 +33,13 @@ export const deleteProductInBascet = (product) => {
         payload: product
     }
 }
+export const addOneFlowerCount = () => {
+    return {
+        type: 'addOneFlowerCount',
+    }
+}
+export const deleteOneFlowerCount = () => {
+    return {
+        type: 'deleteOneFlowerCount',
+    }
+}

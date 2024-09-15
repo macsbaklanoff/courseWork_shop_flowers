@@ -10,6 +10,7 @@
     display: flex;
     width: 1000px;
     height: auto;
+    justify-content: space-between;
 }
 .App-header-left {
     display: flex;
@@ -31,18 +32,19 @@
     display: flex;
     background-color: #e498ff;
     border-radius: 50px;
+    width: 900px;
+    justify-content: center;
+    align-items: center;
 }
-.button-header-menu {
-    margin-top: 70px;
-    margin-left: 35px;
-    font-size: 20px;
-    border: none;
-    background-color: #fcb7f6;
-    border-radius: 10px;
-
+.text-app-header-right {
+    font-size: 21px;
+    text-decoration: none;
+    margin-left: 40px;
+    border-radius: 15px;
 }
-.button-header-menu :hover{
-    background-color: #550073;
+.text-app-header-right:hover {
+    background-color: #ffc402;
+    transition: 0.7s;
 }
 .banner {
     margin-top: 50px;

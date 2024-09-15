@@ -1,17 +1,30 @@
 import { useDispatch, useSelector } from 'react-redux';
 import '../styles/bascet.css'
 import { useEffect, useState } from 'react';
-import { deleteFlowerInBascet, deleteProductInBascet } from '../store/actions/action_1';
+import { addOneFlowerCount, deleteFlowerInBascet, deleteOneFlowerCount, deleteProductInBascet } from '../store/actions/action_1';
 
 function Bascet() {
 
     const arrayFlowerForBascet = useSelector(state => state.arrayFlowerForBascet)
     const arrayRelatedProductsForBascet = useSelector(state => state.arrayRelatedProductsForBascet)
+    const countProduct = useSelector(state=> state.countProduct)
+
     const [yourBascet, setYourBascet] = useState('');
     const [yourFlowers, setYourFlowers] = useState('');
-    const [yourRelatedProducts, setYourRelatedProducts] = useState('')
+    const [yourRelatedProducts, setYourRelatedProducts] = useState('');
+    
     const dispatch = useDispatch();
 
+    const addOneProductinComponents = (counts) => {
+        if (countProduct < counts) {
+            dispatch(addOneFlowerCount())
+        }
+    }
+    const deleteOneProductinComponents = () => {
+        if (countProduct > 1) {
+            dispatch(deleteOneFlowerCount())
+        }
+    }
 
     useEffect(() => {
         if (arrayFlowerForBascet.length === 0 && arrayRelatedProductsForBascet.length === 0) {
@@ -49,11 +62,13 @@ function Bascet() {
                             <div className='one-element-bascet-left'>
                                 <img src = {flower['URL']} className='flower-in-bascet'/>
                                 <p className='text-flower-in-bascet-name'>Наименование: {flower['Наименование']}</p>
-                                <p className='text-flower-in-bascet-count'>Количество: {flower['Количество']}</p>
+                                <p className='text-flower-in-bascet-count'>Количество: {countProduct}</p>
+                                <button onClick={() => addOneProductinComponents(flower['Количество'])}>+</button>
+                                <button onClick={() => deleteOneProductinComponents()}>-</button>
                                 <p className='text-flower-in-bascet-cost'>Цена: {flower['Цена']}</p>
                             </div>
-                            <div>
-                                <button onClick={() => dispatch(deleteFlowerInBascet(flower))}>Удалить</button>
+                            <div className='one-element-bascet-right'>
+                                <button className = 'button-delete-product' onClick={() => dispatch(deleteFlowerInBascet(flower))}>Удалить</button>
                             </div>
                         </div>
                     ))
@@ -70,8 +85,8 @@ function Bascet() {
                                 <p className='text-flower-in-bascet-count'>Количество: {product['Количество']}</p>
                                 <p className='text-flower-in-bascet-cost'>Цена: {product['Цена']}</p>
                             </div>
-                            <div>
-                                <button onClick={() => dispatch(deleteProductInBascet(product))}>Удалить</button>
+                            <div className='one-element-bascet-right'>
+                                <button className='button-delete-product' onClick={() => dispatch(deleteProductInBascet(product))}>Удалить</button>
                             </div>
                         </div>
                     ))

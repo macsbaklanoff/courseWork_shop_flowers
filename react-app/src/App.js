@@ -23,17 +23,11 @@ function App() {
           <Link to = "/" className = "App-text-header-left">ЦВЕТОК</Link>
         </div>
         <div className = "App-header-right">
-          <Link to = "/" className = "text-app-header-right">
-          <button className="button-header-menu">Каталог</button>
-          </Link>
-          <Link to = "/about" className = "text-app-header-right">
-          <button className="button-header-menu">О нас</button>
-          </Link>
-          <Link to = "/catalogRelatedProduct" className = "text-app-header-right">
-          <button className="button-header-menu">Сопутствующие товары</button>
-          </Link>
-          <Link to = '/bascet' className = "text-app-header-right"><button className="button-header-menu">Корзина</button></Link>
-          <Link to = "/constructor" className = "text-app-header-right"><button className="button-header-menu">Создать свой букет</button></Link>
+            <Link to = "/" className = "text-app-header-right">Каталог</Link>
+            <Link to = "/about" className = "text-app-header-right">О нас</Link>
+            <Link to = "/catalogRelatedProduct" className = "text-app-header-right">Сопутствующие товары</Link>
+            <Link to = '/bascet' className = "text-app-header-right">Корзина</Link>
+            <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
         </div>
       </header>
       <div className = "banner">
@@ -58,11 +52,11 @@ function App() {
                     </button>
         </div>
         <footer className="footer">
-          <Link to = "/about" className = "footer-text">О нас</Link>
-          <Link to = "/" className = "footer-text">Каталог</Link>
-          <Link to = "/soptov" className = "footer-text">Сопутствующие товары</Link>
-          <span className = "footer-text">Аккаунт</span>
-          <Link to = "/constructor" className = "footer-text">Создать свой букет</Link>
+          <Link to = "/" className = "text-app-header-right">Каталог</Link>
+          <Link to = "/about" className = "text-app-header-right">О нас</Link>
+          <Link to = "/catalogRelatedProduct" className = "text-app-header-right">Сопутствующие товары</Link>
+          <Link to = "/bascet" className = "text-app-header-right">Корзина</Link>
+          <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
         </footer>
     </div>
   );

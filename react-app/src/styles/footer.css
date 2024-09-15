@@ -8,10 +8,10 @@
 }
 .footer {
     display: flex;
+    background-color: #e498ff;
     margin-top: 50px;
     width: 1000px;
     height: 100px;
-    background: linear-gradient(to right, #EBD9EA, #AD45A8);
     justify-content: center;
     align-items: center;
 }

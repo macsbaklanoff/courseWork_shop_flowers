@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "PTSans-Italic";
+    src: url(../Fonts/PTSans-Italic.ttf);
+}
 .bascet {
     display: flex;
     flex-direction: column;
@@ -22,10 +26,28 @@
 }
 .text-flower-in-bascet-name {
     margin-left: 50px;
+    font-family: "PTSans-Italic";
+    font-size: 18px;
 }
 .text-flower-in-bascet-count {
     margin-left: 50px;
+    font-family: "PTSans-Italic";
+    font-size: 18px;
 }
 .text-flower-in-bascet-cost {
     margin-left: 50px;
+    font-family: "PTSans-Italic";
+    font-size: 18px;
+}
+.button-delete-product {
+    width: 130px;
+    height: 40px;
+    background-color: #550073;
+    color: #FFF;
+    border-radius: 20px;
+    border: none;
+}
+.button-delete-product:hover {
+    background-color: #ffc402;
+    transition: 0.7s;
 }

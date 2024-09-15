@@ -32,7 +32,10 @@
     height: auto;
     border-radius: 20px;
 }
-
+.related-button-buy-product:hover{
+    background-color: #ffc402;
+    transition: 0.7s;
+}
 .related-text-product {
     color: hsl(315, 100%, 27%);
     font-family: 'PTSans-Italic';
