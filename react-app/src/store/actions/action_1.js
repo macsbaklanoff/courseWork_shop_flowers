@@ -21,3 +21,15 @@ export const addProductInBascet = (product) => {
         payload: product
     }
 }
+export const deleteFlowerInBascet = (flower) => {
+    return {
+        type: "deleteFlowerInBascet",
+        payload: flower
+    }
+}
+export const deleteProductInBascet = (product) => {
+    return {
+        type: "deleteProductInBascet",
+        payload: product
+    }
+}

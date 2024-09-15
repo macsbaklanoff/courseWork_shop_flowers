@@ -86,6 +86,7 @@
 .image-one-related-product {
     display: flex;
     width: 190px;
+    border: 1px solid #000;
 }
 .related-text-main-name-product {
     font-family: "PTSans-Italic";

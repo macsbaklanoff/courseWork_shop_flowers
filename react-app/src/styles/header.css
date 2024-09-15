@@ -10,7 +10,6 @@
     display: flex;
     width: 1000px;
     height: auto;
-
 }
 .App-header-left {
     display: flex;
@@ -33,15 +32,17 @@
     background-color: #e498ff;
     border-radius: 50px;
 }
-.text-app-header-right {
-    display: flex;
-    padding-top: 63px;
-    padding-left: 35px;
-    font-family: "Inter";
-    font-weight: 500;
+.button-header-menu {
+    margin-top: 70px;
+    margin-left: 35px;
     font-size: 20px;
-    color:#550073;
-    text-decoration: none;
+    border: none;
+    background-color: #fcb7f6;
+    border-radius: 10px;
+
+}
+.button-header-menu :hover{
+    background-color: #550073;
 }
 .banner {
     margin-top: 50px;

@@ -1,0 +1,31 @@
+.bascet {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+.bascet-first {
+    display: flex;
+    width: 1000px;
+}
+.one-element-bascet {
+    display: flex;
+    border: 1px solid #000;
+    justify-content: space-between;
+    align-items: center;
+}
+.one-element-bascet-left {
+    display: flex;
+    align-items: center;
+}
+.flower-in-bascet {
+    width: 100px;
+}
+.text-flower-in-bascet-name {
+    margin-left: 50px;
+}
+.text-flower-in-bascet-count {
+    margin-left: 50px;
+}
+.text-flower-in-bascet-cost {
+    margin-left: 50px;
+}

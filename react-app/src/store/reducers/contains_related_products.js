@@ -1,4 +1,4 @@
-export const contains = (arr, val) => {
+export const containsRelatedProduct = (arr, val) => {
     let resultFind = arr.find(x => x["Идентификатор товара"] === val["Идентификатор товара"])
     if (resultFind != undefined) {
         return true;

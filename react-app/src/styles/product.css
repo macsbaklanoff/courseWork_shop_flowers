@@ -87,6 +87,7 @@
 .image-one-product {
     display: flex;
     width: 190px;
+    border: 1px solid #000;
 }
 .text-main-name-product {
     font-family: "PTSans-Italic";

@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import {Route, Routes, Link} from "react-router-dom";
-import { addFlowerInBascet, addProductInBascet, inBascet } from "../store/actions/action_1";
+import { addFlowerInBascet, addProductInBascet, setFlower } from "../store/actions/action_1";
 import { useEffect, useState } from "react";
-import { contains } from "../store/reducers/contains_related_products";
+import { containsFlower } from "../store/reducers/contains_flower";
+import { containsRelatedProduct } from '../store/reducers/contains_related_products';
 import '../styles/relatedProduct.css'
 
 function RelatedProduct() {
@@ -12,15 +13,16 @@ function RelatedProduct() {
     const [dataTableFlowers, setdataTableFlowers] = useState([])
     const [countShowProducts, setCountShowProducts] = useState(3)
 
-
+    const flower = useSelector(state => state.flower)
     const product = useSelector(state => state.product)
     const arrayRelatedProductsForBascet = useSelector(state => state.arrayRelatedProductsForBascet)
+    const arrayFlowerForBascet = useSelector(state => state.arrayFlowerForBascet)
 
 
     const dispatch = useDispatch()
     
-    const onClickButtonBuy = () => {
-        if (!contains(arrayRelatedProductsForBascet, product)) {
+    const onClickButtonBuyProduct = () => {
+        if (!containsRelatedProduct(arrayRelatedProductsForBascet, product)) {
             dispatch(addProductInBascet(product));
             setStringInBascet("В корзине");
         }
@@ -36,7 +38,7 @@ function RelatedProduct() {
         console.error('Error fetching data:', error);
         });
 
-        if (!contains(arrayRelatedProductsForBascet, product)) {
+        if (!containsRelatedProduct(arrayRelatedProductsForBascet, product)) {
             setStringInBascet("Добавить в корзину")
         }
         else {
@@ -61,7 +63,7 @@ function RelatedProduct() {
                         <p className="related-text-product-cost">Цена: {product['Цена']}</p>
                     </div>
                     <div className="related-product-upper-right-lower">
-                    <button className="related-button-buy-product" onClick={onClickButtonBuy}>
+                    <button className="related-button-buy-product" onClick={onClickButtonBuyProduct}>
                             {stringInBascet}
                         </button>
                     </div>
@@ -79,7 +81,7 @@ function RelatedProduct() {
                                 <p className = 'related-text-main-name-product'>Кол-во: {flower['Количество']}</p>
                                 <p className = "related-text-main-content-one">{flower['Цена']}</p>
                                 <div className='button'>
-                                    <Link to = "/relatedProduct" className = 'button-buy-in-main-content-catalog'>Купить</Link>
+                                    <Link to = "/product" className = 'button-buy-in-main-content-catalog' onClick = {() => dispatch(setFlower(flower))}>Купить</Link>
                                 </div>
                             </div>
                         ))

@@ -23,11 +23,17 @@ function App() {
           <Link to = "/" className = "App-text-header-left">ЦВЕТОК</Link>
         </div>
         <div className = "App-header-right">
-          <Link to = "/" className = "text-app-header-right">Каталог</Link>
-          <Link to = "/about" className = "text-app-header-right">О нас</Link>
-          <Link to = "/catalogRelatedProduct" className = "text-app-header-right">Сопутствующие товары</Link>
-          <a className = "text-app-header-right">Аккаунт</a>
-          <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
+          <Link to = "/" className = "text-app-header-right">
+          <button className="button-header-menu">Каталог</button>
+          </Link>
+          <Link to = "/about" className = "text-app-header-right">
+          <button className="button-header-menu">О нас</button>
+          </Link>
+          <Link to = "/catalogRelatedProduct" className = "text-app-header-right">
+          <button className="button-header-menu">Сопутствующие товары</button>
+          </Link>
+          <Link to = '/bascet' className = "text-app-header-right"><button className="button-header-menu">Корзина</button></Link>
+          <Link to = "/constructor" className = "text-app-header-right"><button className="button-header-menu">Создать свой букет</button></Link>
         </div>
       </header>
       <div className = "banner">

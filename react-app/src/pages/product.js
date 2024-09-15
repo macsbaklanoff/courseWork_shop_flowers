@@ -2,9 +2,10 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import {Route, Routes, Link} from "react-router-dom";
 import productcss from '../styles/product.css';
-import { addFlowerInBascet, inBascet, setFlower } from "../store/actions/action_1";
+import { addFlowerInBascet, setFlower } from "../store/actions/action_1";
 import { useEffect, useState } from "react";
-import { contains } from "../store/reducers/contains_flower";
+import { containsFlower } from "../store/reducers/contains_flower";
+import { containsRelatedProduct } from "../store/reducers/contains_related_products";
 
 
 function Product() {
@@ -19,7 +20,7 @@ function Product() {
     const dispatch = useDispatch()
     
     const onClickButtonBuy = () => {
-        if (!contains(arrayFlowerForBascet, flower)) {
+        if (!containsFlower(arrayFlowerForBascet, flower)) {
             dispatch(addFlowerInBascet(flower));
             setStringInBascet("В корзине");
         }
@@ -35,7 +36,7 @@ function Product() {
         console.error('Error fetching data:', error);
         });
 
-        if (!contains(arrayFlowerForBascet, flower)) {
+        if (!containsFlower(arrayFlowerForBascet, flower)) {
             setStringInBascet("Добавить в корзину")
         }
         else {
