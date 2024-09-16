@@ -1,7 +1,11 @@
-export const containsRelatedProduct = (arr, val) => {
-    let resultFind = arr.find(x => x["Идентификатор товара"] === val["Идентификатор товара"])
-    if (resultFind != undefined) {
-        return true;
+export const containsRelatedProduct = (arr, key) => {
+    let resultArray = []
+    for (const [key, value] of arr) {
+        resultArray.push(key)
     }
-    return false;
+    resultArray = resultArray.filter(x => x['Идентификатор товара'] == key['Идентификатор товара'])
+    if (resultArray == undefined || resultArray.length == 0) {
+        return false;
+    }
+    return true;
 }

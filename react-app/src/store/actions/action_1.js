@@ -33,13 +33,27 @@ export const deleteProductInBascet = (product) => {
         payload: product
     }
 }
-export const addOneFlowerCount = () => {
+export const addOneFlowerCount = (flower) => {
     return {
         type: 'addOneFlowerCount',
+        payload: flower,
     }
 }
-export const deleteOneFlowerCount = () => {
+export const deleteOneFlowerCount = (flower) => {
     return {
         type: 'deleteOneFlowerCount',
+        payload: flower,
+    }
+}
+export const addOneProductCount = (product) => {
+    return {
+        type: 'addOneProductCount', 
+        payload: product
+    }
+}
+export const deleteOneProductCount = (product) => {
+    return {
+        type: 'deleteOneProductCount', 
+        payload: product
     }
 }

@@ -1,7 +1,11 @@
-export const containsFlower = (arr, val) => {
-    let resultFind = arr.find(x => x["Идентификатор букета"] === val["Идентификатор букета"])
-    if (resultFind != undefined) {
-        return true;
+export const containsFlower = (arr, key) => {
+    let resultArray = []
+    for (const [key, value] of arr) {
+        resultArray.push(key)
     }
-    return false;
+    resultArray = resultArray.filter(x => x['Идентификатор букета'] == key['Идентификатор букета'])
+    if (resultArray == undefined || resultArray.length == 0) {
+        return false;
+    }
+    return true;
 }

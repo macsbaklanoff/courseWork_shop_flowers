@@ -30,12 +30,12 @@ function Product() {
         axios.get("http://localhost:3001/getRelatedProducts")
         .then(response => {
             setdataTableRelatedProductsFull(response.data);
-            setdataTableRelatedProducts(response.data.filter((_, index) => index < countShowProducts))
+            setdataTableRelatedProducts(response.data.filter((_, index) => index < countShowProducts))//для кнопки показать еще для постепенного показа
         })
         .catch(error => {
         console.error('Error fetching data:', error);
         });
-
+        console.log(arrayFlowerForBascet)
         if (!containsFlower(arrayFlowerForBascet, flower)) {
             setStringInBascet("Добавить в корзину")
         }
