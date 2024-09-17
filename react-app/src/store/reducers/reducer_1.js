@@ -3,7 +3,7 @@ import { contains } from "./contains_flower";
 
 let initialState = {
     product: {},
-    countProduct: 1,
+    sort: undefined,
     arrayFlowerForBascet: new Map(),
     arrayRelatedProductsForBascet: new Map(),
 }
@@ -49,7 +49,6 @@ export const reducer = (state = initialState, action) => {
         state.arrayRelatedProductsForBascet.set(action.payload, temp - 1)
         return {...state}
     }
-
     return {...state};
     
 }

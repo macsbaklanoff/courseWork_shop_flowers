@@ -8,6 +8,7 @@ import { containsRelatedProduct } from '../store/reducers/contains_related_produ
 import '../styles/relatedProduct.css'
 
 function RelatedProduct() {
+    const arrayFlowerForBascetMap = useSelector(state => state.arrayFlowerForBascet)
     const [stringInBascet, setStringInBascet] = useState("Добавить в корзину")
     const [dataTableFlowersFull, setdataTableFlowersFull] = useState([])
     const [dataTableFlowers, setdataTableFlowers] = useState([])
@@ -80,8 +81,12 @@ function RelatedProduct() {
                                 <p className = 'related-text-main-name-product'>{flower['Наименование']}</p>
                                 <p className = 'related-text-main-name-product'>Кол-во: {flower['Количество']}</p>
                                 <p className = "related-text-main-content-one">{flower['Цена']}</p>
-                                <div className='button'>
-                                    <Link to = "/product" className = 'button-buy-in-main-content-catalog' onClick = {() => dispatch(setFlower(flower))}>Купить</Link>
+                                <div className='button' style={
+                                    {
+                                        backgroundColor: containsFlower(arrayFlowerForBascetMap, flower) ? "#ffc402" : "#AF65AC"
+                                    }
+                                }>
+                                    <Link to = "/product" className = 'button-buy-in-main-content-catalog' onClick = {() => dispatch(setFlower(flower))}>{containsFlower(arrayFlowerForBascetMap, flower) ? "В корзине" : "Купить"}</Link>
                                 </div>
                             </div>
                         ))

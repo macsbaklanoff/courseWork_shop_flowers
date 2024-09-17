@@ -9,6 +9,8 @@ import { containsRelatedProduct } from "../store/reducers/contains_related_produ
 
 
 function Product() {
+    const arrayRelatedProductsForBascetMap = useSelector(state => state.arrayRelatedProductsForBascet)
+
     const [stringInBascet, setStringInBascet] = useState("Добавить в корзину")
     const [dataTableRelatedProductsFull, setdataTableRelatedProductsFull] = useState([])
     const [dataTableRelatedProducts, setdataTableRelatedProducts] = useState([])
@@ -78,14 +80,18 @@ function Product() {
                                 <p className = 'text-main-name-product'>{product['Наименование']}</p>
                                 <p className = 'text-main-name-product'>Кол-во: {product['Количество']}</p>
                                 <p className = "text-main-content-one">{product['Цена']}</p>
-                                <div className='button'>
-                                    <Link to = "/relatedProduct" className = 'button-buy-in-main-content-catalog' onClick={() => dispatch(setFlower(product))}>Купить</Link>
+                                <div className='button' style={
+                                    {
+                                        backgroundColor: containsRelatedProduct(arrayRelatedProductsForBascetMap, product) ? "#ffc402" : "#AF65AC"
+                                    }
+                                }>
+                                    <Link to = "/relatedProduct" className = 'button-buy-in-main-content-catalog' onClick={() => dispatch(setFlower(product))}>{containsRelatedProduct(arrayRelatedProductsForBascetMap, product) ? "В корзине" : "Купить"}</Link>
                                 </div>
                             </div>
                         ))
                     }
                     </div>
-                    <button onClick={() => setCountShowProducts(countShowProducts + 3)}>Показать еще</button>
+                    <button className = 'showMore-product' onClick={() => setCountShowProducts(countShowProducts + 3)}>Показать еще</button>
                 </div>
             </div>
         </div>

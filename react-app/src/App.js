@@ -13,8 +13,12 @@ import Product from "./pages/product";
 import Constructor from "./pages/constructor";
 import Bascet from "./pages/bascet";
 import RelatedProduct from './pages/relatedProduct';
+import { useSelector } from "react-redux";
 
 function App() {
+  const arrayFlowerForBascetMap = useSelector(state => Array.from(state.arrayFlowerForBascet.keys()).length)
+  const arrayRelatedProductsForBascetMap = useSelector(state=> Array.from(state.arrayRelatedProductsForBascet.keys()).length)
+
   return (
     <div className="App">
       <header className="App-header">
@@ -26,7 +30,7 @@ function App() {
             <Link to = "/" className = "text-app-header-right">Каталог</Link>
             <Link to = "/about" className = "text-app-header-right">О нас</Link>
             <Link to = "/catalogRelatedProduct" className = "text-app-header-right">Сопутствующие товары</Link>
-            <Link to = '/bascet' className = "text-app-header-right">Корзина</Link>
+            <Link to = '/bascet' className = "text-app-header-right">Корзина ({arrayFlowerForBascetMap + arrayRelatedProductsForBascetMap})</Link>
             <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
         </div>
       </header>
@@ -55,7 +59,7 @@ function App() {
           <Link to = "/" className = "text-app-header-right">Каталог</Link>
           <Link to = "/about" className = "text-app-header-right">О нас</Link>
           <Link to = "/catalogRelatedProduct" className = "text-app-header-right">Сопутствующие товары</Link>
-          <Link to = "/bascet" className = "text-app-header-right">Корзина</Link>
+          <Link to = "/bascet" className = "text-app-header-right">Корзина ({arrayFlowerForBascetMap + arrayRelatedProductsForBascetMap})</Link>
           <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
         </footer>
     </div>

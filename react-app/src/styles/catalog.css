@@ -1,10 +1,23 @@
+.flowers-app-upper{ 
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    width: auto;
+}
+.search-in-flowers {
+    width: 700px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #550073
+}
+
 .main-app-flowers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: auto;
     height: auto;
     grid-gap: 70px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-right: 100px;
     margin-left: 60px;
 }
@@ -37,15 +50,16 @@
     align-items: center;
     width: 150px;
     border-radius: 20px;
-    background-color: #AF65AC;
 }
+.button:hover {
+    background-color: #ffc402;
+    transition: 0.7s;
+}
+
+
 .button-buy-in-main-content-catalog {
     display: flex;
     color: #FFF;
     text-decoration: none;
     font-size: 20px;
-}
-.button:hover {
-    background-color: #ffc402;
-    transition: 0.7s;
 }

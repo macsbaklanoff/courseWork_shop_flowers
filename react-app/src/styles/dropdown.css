@@ -1,0 +1,17 @@
+.dropdown {
+    display: flex;
+}
+.button-dropdown-one{
+    display: flex;
+    width: 120px;
+    font-size: 14px;
+}
+.list {
+    list-style: none;
+    font-size: 14px;
+    padding: 0;
+}
+.li {
+    cursor: pointer;
+    margin-top: 7px;
+}
