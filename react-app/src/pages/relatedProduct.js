@@ -14,10 +14,10 @@ function RelatedProduct() {
     const [dataTableFlowers, setdataTableFlowers] = useState([])
     const [countShowProducts, setCountShowProducts] = useState(3)
 
-    const flower = useSelector(state => state.flower)
+    //const flower = useSelector(state => state.flower)
     const product = useSelector(state => state.product)
     const arrayRelatedProductsForBascet = useSelector(state => state.arrayRelatedProductsForBascet)
-    const arrayFlowerForBascet = useSelector(state => state.arrayFlowerForBascet)
+    //const arrayFlowerForBascet = useSelector(state => state.arrayFlowerForBascet)
 
 
     const dispatch = useDispatch()
@@ -92,7 +92,7 @@ function RelatedProduct() {
                         ))
                     }
                     </div>
-                    <button onClick={() => setCountShowProducts(countShowProducts + 3)}>Показать еще</button>
+                    <button className = 'showMore-product' onClick={() => setCountShowProducts(countShowProducts + 3)}>Показать еще</button>
                 </div>
             </div>
         </div>

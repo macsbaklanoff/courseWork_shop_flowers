@@ -57,3 +57,8 @@ export const deleteOneProductCount = (product) => {
         payload: product
     }
 }
+export const deleteBascet = () => {
+    return {
+        type: 'deleteBascet',
+    }
+}

@@ -40,6 +40,21 @@ app.get('/getRelatedProducts', (req, res) => {
     res.json(dataTableRelatedProducts.rows)
 })
 
+let flowers = []
+
+app.post('/postOrder', (req, res) => {
+    res.json('ok')
+    flowers = []
+    console.log(req.body.order.arrayFlowerForBascetMap[1][0])
+    for (let i = 0; i < req.body.order.arrayFlowerForBascetMap[0].length; i++) {
+        flowers.push(req.body.order.arrayFlowerForBascetMap[0][i]['Наименование'])
+        //console.log(flowers)
+        flowers.push(req.body.order.arrayFlowerForBascetMap[1][i])
+    }
+    console.log(flowers)
+})
+
+
 app.listen(PORT, HOST, (error) => {
     if (!error) {
         console.log("server-ok")

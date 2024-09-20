@@ -21,6 +21,7 @@
 .related-product-upper-left {
     display: flex;
     width: 400px;
+    height: 500px;
     border: 1px solid #000000;
 }
 .related-product-upper-right {
@@ -73,7 +74,7 @@
     grid-gap: 70px;
     margin-top: 40px;
     margin-right: 100px;
-    margin-left: 60px;
+    margin-left: 95px;
 }
 .one-related-product {
     display: flex;
@@ -100,4 +101,10 @@
     font-size: 26px;
     color: #550073;
     font-weight: 600;
+}
+.related-product-lower-lower {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

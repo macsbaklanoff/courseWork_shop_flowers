@@ -11,6 +11,7 @@
     border: 2px solid #550073
 }
 
+
 .main-app-flowers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

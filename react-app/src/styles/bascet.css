@@ -51,3 +51,42 @@
     background-color: #ffc402;
     transition: 0.7s;
 }
+.bascet-last {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.bascet-last-count {
+    display: flex;
+    justify-content: space-between;
+}
+.div-inputs {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+.order-left {
+    display: flex;
+    flex-direction: column;
+}
+.order-right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.input-element {
+    margin-top: 42px;
+}
+.div-input-adress {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+.input-element-your-adress {
+    margin-top: 45px;
+}
+.create-an-order {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}

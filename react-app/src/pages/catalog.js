@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setFlower } from '../store/actions/action_1';
 import { containsFlower } from '../store/reducers/contains_flower';
 import { eventWrapper } from '@testing-library/user-event/dist/utils';
+import { hover } from '@testing-library/user-event/dist/hover';
 
 function Catalog() {
     
@@ -63,6 +64,7 @@ function Catalog() {
                         <div className='button' style={
                             {
                                 backgroundColor: containsFlower(arrayFlowerForBascetMap, flower) ? "#ffc402" : "#AF65AC"
+                                
                             }
                         }>
                             <Link to = "/product" className = 'button-buy-in-main-content-catalog' onClick={() => {dispatch(setFlower(flower))}}>{containsFlower(arrayFlowerForBascetMap, flower) ? 'В корзине' : "Купить"}</Link>

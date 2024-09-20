@@ -49,6 +49,9 @@ export const reducer = (state = initialState, action) => {
         state.arrayRelatedProductsForBascet.set(action.payload, temp - 1)
         return {...state}
     }
+    if (action.type == 'deleteBascet') {
+        return {...state, ...state.arrayFlowerForBascet.clear(), ...state.arrayRelatedProductsForBascet.clear()}
+    }
     return {...state};
     
 }

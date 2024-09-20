@@ -29,7 +29,7 @@ function CatalogRelatedProduct() {
             setdataRelatedProducts(dataRelatedProductsFull)
         }
         else {
-            setdataRelatedProducts(dataRelatedProductsFull.filter(x => x['Наименование'].includes(searchString) || x['Количество'] == searchString))
+            setdataRelatedProducts(dataRelatedProductsFull.filter(x => x['Наименование'].toLowerCase().includes(searchString.toLowerCase()) || x['Количество'] == searchString))
         }
     }, [searchString])
     const dispatch = useDispatch();
@@ -49,7 +49,7 @@ function CatalogRelatedProduct() {
                     ></input>
                 </div>
                 <div className='flowers-app-upper-right'>
-                    <Dropdown/>
+                    
                 </div>
             </div>
             <div className='main-app-flowers'>
