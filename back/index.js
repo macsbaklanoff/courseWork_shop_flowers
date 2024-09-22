@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const {Pool} = require('pg')
+const go_to_db  = require('./go_to_db_dir/go_to_db')
 
 
 const app = express()
@@ -40,20 +41,11 @@ app.get('/getRelatedProducts', (req, res) => {
     res.json(dataTableRelatedProducts.rows)
 })
 
-let flowers = []
 
 app.post('/postOrder', (req, res) => {
     res.json('ok')
-    flowers = []
-    console.log(req.body.order.arrayFlowerForBascetMap[1][0])
-    for (let i = 0; i < req.body.order.arrayFlowerForBascetMap[0].length; i++) {
-        flowers.push(req.body.order.arrayFlowerForBascetMap[0][i]['Наименование'])
-        //console.log(flowers)
-        flowers.push(req.body.order.arrayFlowerForBascetMap[1][i])
-    }
-    console.log(flowers)
+    go_to_db.go_to_db(req.body.order, connectForFlowers);
 })
-
 
 app.listen(PORT, HOST, (error) => {
     if (!error) {

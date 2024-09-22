@@ -1,0 +1,2 @@
+DELETE FROM "Клиент";
+COPY "Клиент" FROM 'D:\courseWork_shop_flowers\data-base-flowers\запись_клиент.txt' ENCODING 'WIN1251' HEADER DELIMITER E'\t' NULL AS 'NULL';

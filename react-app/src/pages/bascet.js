@@ -114,7 +114,7 @@ function Bascet() {
             telephone: telephone,
             adressClient: adressClient != '' ? adressClient : ''
         }
-        dispatch(deleteBascet());
+        //dispatch(deleteBascet());
         orderToBack(objectForBackend)
     }
 
