@@ -2,7 +2,6 @@ const go_to_db_order = require("./go_to_db_order");
 
 
 const go_to_client = async (order, connectForFlowers) => {
-    console.log('plohi')
     let indexForClientTable = await connectForFlowers.query('SELECT COUNT(*) FROM "Клиент";');
     let indexForOrderTable = await connectForFlowers.query('SELECT COUNT(*) FROM "Заказ";');
 

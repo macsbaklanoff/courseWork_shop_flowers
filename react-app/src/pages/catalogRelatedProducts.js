@@ -24,7 +24,6 @@ function CatalogRelatedProduct() {
         console.error('Error fetching data:', error);
         });
         }, []);
-    useEffect(() => {}, [dataRelatedProducts])
     useEffect(() => {
         if (searchString.length == 0) {
             setdataRelatedProducts(dataRelatedProductsFull)
