@@ -109,7 +109,7 @@ function Bascet() {
             alert("Проверьте заполненные поля!");
             return;
         }
-        console.log(arrayFlowerForBascetMap)
+
         const objectForBackend = {
             arrayFlowerForBascetMap: [Array.from(arrayFlowerForBascetMap.keys()), Array.from(arrayFlowerForBascetMap.values())],
             arrayRelatedProductForBascetMap: [Array.from(arrayRelatedProductForBascetMap.keys()), Array.from(arrayRelatedProductForBascetMap.values())],

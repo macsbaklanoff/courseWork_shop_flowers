@@ -24,6 +24,7 @@ function CatalogRelatedProduct() {
         console.error('Error fetching data:', error);
         });
         }, []);
+    useEffect(() => {}, [dataRelatedProducts])
     useEffect(() => {
         if (searchString.length == 0) {
             setdataRelatedProducts(dataRelatedProductsFull)
@@ -54,7 +55,7 @@ function CatalogRelatedProduct() {
             </div>
             <div className='main-app-flowers'>
                 {
-                    dataRelatedProducts.map(relatedProduct => (
+                    dataRelatedProducts && dataRelatedProducts.map(relatedProduct => (
                      <div className='one-flowers'>
                         <img className = 'image-one-flower' src = {relatedProduct['URL']}></img>
                         <p className = 'text-main-name-flower'>{relatedProduct['Наименование']}</p>

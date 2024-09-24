@@ -17,6 +17,6 @@ const go_to_client = async (order, connectForFlowers) => {
         '${order.telephone}', 
         '${order.adressClient == '' ? 'Самовывоз' : order.adressClient}');`)
          
-        await go_to_db_order.go_to_db_order(order, connectForFlowers);
+    go_to_db_order.go_to_db_order(order, connectForFlowers);
 }
 module.exports.go_to_client = go_to_client;

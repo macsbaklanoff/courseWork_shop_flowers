@@ -1,8 +1,9 @@
+const delete_records_db= require("./delete_records_db");
+
 const create_order_string = (order) => {
     let local_order = []
     let cost = 0
     let count = 0
-    console.log(order.arrayFlowerForBascetMap[0].length)
     for (let i = 0; i < order.arrayFlowerForBascetMap[0].length; i++) {
         local_order.push(order.arrayFlowerForBascetMap[0][i]['Наименование']);
         local_order.push(order.arrayFlowerForBascetMap[1][i]);
@@ -24,11 +25,13 @@ const create_order_string = (order) => {
     }
 }
 
+
+
 const go_to_db_order = async (order, connectForFlowers) => {
     const order_for_db = create_order_string(order)
     let indexForClientTable = await connectForFlowers.query('SELECT COUNT(*) FROM "Клиент";');
     let indexForOrderTable = await connectForFlowers.query('SELECT COUNT(*) FROM "Заказ";');
-   await connectForFlowers.query(`
+    await connectForFlowers.query(`
         INSERT INTO "Заказ" VALUES (
         ${Number(indexForOrderTable.rows[0].count) + 1},
         ${Number(indexForClientTable.rows[0].count)},
@@ -37,6 +40,6 @@ const go_to_db_order = async (order, connectForFlowers) => {
         ${order_for_db.count}
         );
         `)
-    
+        delete_records_db.delete_records_db(order, connectForFlowers)
 }
 module.exports.go_to_db_order = go_to_db_order;
