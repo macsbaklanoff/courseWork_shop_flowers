@@ -17,6 +17,7 @@ function Bascet() {
     const [yourBascet, setYourBascet] = useState('');
     const [yourFlowers, setYourFlowers] = useState('');
     const [yourRelatedProducts, setYourRelatedProducts] = useState('');
+    const [emptyBascet, setEmptyBascet] = useState(true);
 
     const [showOrder, setShowOrder] = useState(false)
     
@@ -80,21 +81,25 @@ function Bascet() {
             setYourBascet("Ваша корзина пуста, выберите что то из каталогов и вернитесь на эту страницу")
             setYourFlowers('')
             setYourRelatedProducts('')
+            setEmptyBascet(true);
         }
         else if (arrayFlowerForBascetMap.size != 0 && arrayRelatedProductForBascetMap.size != 0) {
             setYourBascet("Ваша корзина")
             setYourFlowers("Выбранные букеты")
             setYourRelatedProducts("Выбранные товары")
+            setEmptyBascet(false);
         }
         else if (arrayFlowerForBascetMap.size != 0 && arrayRelatedProductForBascetMap.size == 0) {
             setYourBascet("Ваша корзина:")
             setYourFlowers("Выбранные букеты:")
             setYourRelatedProducts("")
+            setEmptyBascet(false)
         }
         else if (arrayFlowerForBascetMap.size == 0 && arrayRelatedProductForBascetMap.size != 0) {
             setYourBascet("Ваша корзина:")
             setYourFlowers("")
             setYourRelatedProducts("Выбранные товары:")
+            setEmptyBascet(false)
         }        
         
     }, [arrayFlowerForBascetKeys, arrayRelatedProductForBascetKeys])
@@ -114,8 +119,12 @@ function Bascet() {
             telephone: telephone,
             adressClient: adressClient != '' ? adressClient : ''
         }
-        //dispatch(deleteBascet());
+        dispatch(deleteBascet());
         orderToBack(objectForBackend)
+        setEmptyBascet(true)
+        setYourBascet('Благодарим вас за покупку!')
+        setYourFlowers('')
+        setYourRelatedProducts('')
     }
 
     return(
@@ -140,7 +149,6 @@ function Bascet() {
                                 <button className = 'button-delete-product' onClick={() => {
                                     dispatch(deleteFlowerInBascet(flower))
                                     setarrayFlowerForBascetKeys(Array.from(arrayFlowerForBascetMap.keys()))
-                                    
                                     }}>Удалить</button>
                             </div>
                         </div>
@@ -153,7 +161,7 @@ function Bascet() {
                     Array.from(arrayRelatedProductForBascetMap.keys()).map(product =>(
                         <div className='one-element-bascet'>
                             <div className='one-element-bascet-left'>
-                                <img src = {product['URL']} className='flower-in-bascet'/>
+                                <img src = {product['URL']} className='related-product-in-bascet'/>
                                 <p className='text-flower-in-bascet-name'>Наименование: {product['Наименование']}</p>
                                 <p className='text-flower-in-bascet-count'>Количество: {arrayRelatedProductForBascetMap.get(product)}</p>
                                 <button onClick={() => addOneRelatedProductInComponents(product)}>+</button>
@@ -170,39 +178,38 @@ function Bascet() {
                     ))
                 }
             </div>
-            {(arrayFlowerForBascetMap.size || arrayRelatedProductForBascetMap.size) && <div className='bascet-last'>
+            {!emptyBascet && <div className='bascet-last'>
                         <div>
-                            <h2>Итого:</h2>
+                            <h2 className='text-bascet-last'>Итого:</h2>
                          </div>
                         <div className='bascet-last-count'>
-                            <h3>Всего товаров:</h3>
-                            <h3>
+                            <h3 className='text-bascet-last'>Всего товаров:</h3>
+                            <h3 className='text-bascet-last'>
                             {
                                 countProductsAll(arrayFlowerForBascetMap, arrayRelatedProductForBascetMap)
                             } шт.
                             </h3>
                         </div>
                         <div className='bascet-last-count'>
-                            <h3>Итоговая сумма:</h3>
-                            <h3>
+                            <h3 className='text-bascet-last'>Итоговая сумма:</h3>
+                            <h3 className='text-bascet-last'>
                                 {
                                     costProducts(arrayFlowerForBascetMap, arrayRelatedProductForBascetMap)
                                 } р.
-                                
                             </h3>
                         </div>
+                        <button onClick={() => {!showOrder ? setShowOrder(true) : setShowOrder(false)}} className='button-buy-bascet-last'>Купить</button> 
                 </div>
             }
             <div className = 'order'>
-                <button onClick={() => {!showOrder ? setShowOrder(true) : setShowOrder(false)}}>Купить</button>
-                {showOrder && 
-                <div className='div-inputs'>
+                {
+                showOrder && !emptyBascet && <div className='div-inputs'>
                     <div className='order-left'>
-                        <h4>Фамилия*:</h4>
-                        <h4>Имя*:</h4>
-                        <h4>Отчество*:</h4>
-                        <h4>Телефон*:</h4>
-                        <h4>Способ получения*:</h4>
+                        <h4 className='order-left-data'>Фамилия*:</h4>
+                        <h4 className='order-left-data'>Имя*:</h4>
+                        <h4 className='order-left-data'>Отчество*:</h4>
+                        <h4 className='order-left-data'>Телефон*:</h4>
+                        <h4 className='order-left-data'>Способ получения*:</h4>
                         {
                             methodDelivery == 'Доставка по адресу' && <h4>Ваш адрес*:</h4>
                         }
@@ -212,7 +219,7 @@ function Bascet() {
                         </datalist>
                     </div>
                     <div className='order-right'>
-                        <input onChange={handleInputSecondName}></input>
+                        <input onChange={handleInputSecondName} className = 'input-element-one'></input>
                         <input onChange={handleInputFirstName} className='input-element'></input>
                         <input onChange={handleInputThreeName} className='input-element'></input>
                         <input onChange={handleInputTelephone} className='input-element'></input>
@@ -230,7 +237,6 @@ function Bascet() {
                         }       
                     </div>
                 </div>
-                
                 }
             </div>
         </div>

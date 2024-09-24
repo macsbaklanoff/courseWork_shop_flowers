@@ -5,7 +5,7 @@ const go_to_client = async (order, connectForFlowers) => {
     console.log('plohi')
     let indexForClientTable = await connectForFlowers.query('SELECT COUNT(*) FROM "Клиент";');
     let indexForOrderTable = await connectForFlowers.query('SELECT COUNT(*) FROM "Заказ";');
-    //console.log(order)
+
    await connectForFlowers.query(
         `INSERT INTO "Клиент" VALUES 
         (
@@ -15,7 +15,7 @@ const go_to_client = async (order, connectForFlowers) => {
         '${order.firstNameClient}', 
         '${order.threeNameClient}', 
         '${order.telephone}', 
-        '${order.adressClient}');`)
+        '${order.adressClient == '' ? 'Самовывоз' : order.adressClient}');`)
          
         await go_to_db_order.go_to_db_order(order, connectForFlowers);
 }

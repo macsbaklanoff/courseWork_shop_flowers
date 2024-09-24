@@ -24,6 +24,10 @@
 .flower-in-bascet {
     width: 100px;
 }
+.related-product-in-bascet {
+    width: 100px;
+    height: 100px;
+}
 .text-flower-in-bascet-name {
     margin-left: 50px;
     font-family: "PTSans-Italic";
@@ -60,6 +64,18 @@
     display: flex;
     justify-content: space-between;
 }
+.text-bascet-last {
+    font-family: 'PTSans-Italic';
+    font-size: 23px;
+}
+.button-buy-bascet-last {
+    height: 30px;
+    width: 200px;
+    background-color: #550073;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+}
 .div-inputs {
     display: flex;
     width: 400px;
@@ -69,13 +85,28 @@
     display: flex;
     flex-direction: column;
 }
+.order-left-data {
+    margin-top: 23px;
+    font-family: 'PTSans-Italic';
+    font-size:17px;
+}
 .order-right {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
+.input-element-one { 
+    width: 200px;
+    border: 2px dashed #550073;
+    border-radius: 10px;
+    height: 20px;
+}
 .input-element {
     margin-top: 42px;
+    width: 200px;
+    border: 2px dashed #550073;
+    border-radius: 10px;
+    height: 20px;
 }
 .div-input-adress {
     display: flex;
@@ -89,4 +120,19 @@
     display: flex;
     margin-top: 10px;
     justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    background-color: #550073;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+}
+.create-an-order:hover {
+    background-color: #ffc402;
+    transition: 0.3s;
+}
+.button-buy-bascet-last:hover{
+    background-color: #ffc402;
+    transition: 0.3s;
 }

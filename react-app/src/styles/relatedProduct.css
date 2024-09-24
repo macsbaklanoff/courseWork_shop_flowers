@@ -35,7 +35,7 @@
 }
 .related-button-buy-product:hover{
     background-color: #ffc402;
-    transition: 0.7s;
+    transition: 0.3s;
 }
 .related-text-product {
     color: hsl(315, 100%, 27%);
@@ -95,7 +95,7 @@
 .related-text-main-name-product {
     font-family: "PTSans-Italic";
     font-size: 18px;
-    color:#AF65AC
+    color:#550073;
 }
 .related-text-main-content-one {
     font-size: 26px;

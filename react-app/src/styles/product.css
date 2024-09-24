@@ -34,7 +34,7 @@
 }
 .button-buy-product:hover {
     background-color: #ffc402;
-    transition: 0.7s;
+    transition: 0.3s;
 }
 
 .text-product {
@@ -96,7 +96,7 @@
 .text-main-name-product {
     font-family: "PTSans-Italic";
     font-size: 18px;
-    color:#AF65AC
+    color:#550073;
 }
 .product-lower-lower {
     display: flex;
@@ -112,8 +112,9 @@
     background-color:#AF65AC;
     border: none;
     color: #FFF;
+    border-radius: 20px;
 }
 .showMore-product:hover{
     background-color: #ffc402;
-    transition: 0.7s;
+    transition: 0.3s;
 }
