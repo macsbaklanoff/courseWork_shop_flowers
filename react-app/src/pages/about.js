@@ -6,7 +6,7 @@ function About() {
         <div className = "about-us">
             <div className = "about-us-left">
                 <span className = "text-about-us-h">О нас</span>
-                <span className = "text-about-us-l"> Если путь к сердцу мужчины лежит через желудок, 
+                <span className = "text-about-us-l"><pre/>Если путь к сердцу мужчины лежит через желудок, 
 то путь к сердцу девушки – через роскошный букет цветов, 
 от которого трудно отвести взгляд. Это признание в любви 
 в наивысшей точке, и красота в последней инстанции. Поэтому 

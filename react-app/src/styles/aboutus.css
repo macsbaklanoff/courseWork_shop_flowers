@@ -8,27 +8,27 @@
 }
 .about-us{
     display: flex;
-    position: absolute;
-    margin-top: 480px;
+    margin-top: 70px;
+    width: 1000px;
+    justify-content: space-between;
 }
 .about-us-left {
     display: flex;
     flex-direction: column;
-    margin-left: 350px;
 }
 .text-about-us-h {
     font-family: 'Inter';
-    font-size: 40px;
+    font-size: 35px;
     color: #550073;
 }
 .text-about-us-l {
     font-family: 'Inter';
-    font-size: 23px;
+    font-size: 20px;
     color: #550073;
 }
 .about-us-right {
-    margin-right: 330px;
+
 }
 .images-about-us {
-    height: 800px;
+    height: 600px;
 }

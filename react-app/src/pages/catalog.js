@@ -27,7 +27,6 @@ function Catalog() {
         console.error('Error fetching data:', error);
         });
         }, []);
-    useEffect(() => {}, [dataFlowers]) // изменение базы данных и компонента после покупки товаров
     useEffect(() => {
         if (searchString.length == 0) {
             setDataFlowers(dataFlowersFull)
@@ -41,7 +40,6 @@ function Catalog() {
 
     const changeInputFlower = event => {
         setsearchString(event.target.value)
-        //console.log(searchString)
     }
 
     return (

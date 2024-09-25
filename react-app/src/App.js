@@ -3,7 +3,6 @@ import './App.css';
 import './styles/header.css';
 import './styles/info.css'
 import './styles/footer.css'
-import backgroundapp from './background-fon1.jpg';
 import logo from './rose.png';
 import banner from './banner.png'
 import Catalog from "./pages/catalog";
@@ -31,7 +30,6 @@ function App() {
             <Link to = "/about" className = "text-app-header-right">О нас</Link>
             <Link to = "/catalogRelatedProduct" className = "text-app-header-right">Сопутствующие товары</Link>
             <Link to = '/bascet' className = "text-app-header-right">Корзина ({arrayFlowerForBascetMap + arrayRelatedProductsForBascetMap})</Link>
-            <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
         </div>
       </header>
       <div className = "banner">
@@ -42,17 +40,16 @@ function App() {
           <Route path = "/" element = {<Catalog/>}/>
           <Route path = "/about" element = {<About/>}/>
           <Route path = "/catalogRelatedProduct" element = {<CatalogRelatedProduct/>}/>
-          <Route path = "/constructor" element = {<Constructor/>}/>
           <Route path = "/product" element = {<Product/>}/>
           <Route path = "/bascet" element = {<Bascet/>}/>
           <Route path = "/relatedProduct" element = {<RelatedProduct/>}/>
         </Routes>
         <div className = "info">
                     <button className='button-about-us'>
-                        <a>О нас</a>
+                        <Link to = '/about' className="aboutus-butt-in-info">О нас</Link>
                     </button>
                     <button className='button-about-us'>
-                        <a>Услуги флориста</a>
+                        <a className="aboutus-butt-in-info">Услуги флориста</a>
                     </button>
         </div>
         <footer className="footer">
@@ -60,7 +57,7 @@ function App() {
           <Link to = "/about" className = "text-app-header-right">О нас</Link>
           <Link to = "/catalogRelatedProduct" className = "text-app-header-right">Сопутствующие товары</Link>
           <Link to = "/bascet" className = "text-app-header-right">Корзина ({arrayFlowerForBascetMap + arrayRelatedProductsForBascetMap})</Link>
-          <Link to = "/constructor" className = "text-app-header-right">Создать свой букет</Link>
+        
         </footer>
     </div>
   );

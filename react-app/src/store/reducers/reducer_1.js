@@ -9,49 +9,38 @@ let initialState = {
 }
 
 export const reducer = (state = initialState, action) => {   
-    if (action.type == 'setFlower') {
-        return {...state, product: action.payload}
+    switch (action.type) {
+        case 'setFlower':
+            return{...state, product: action.payload}
+        case 'getFlower':
+            return {...state}
+        case 'addFlowerInBascet':
+            return {...state, product:action.payload, ...state.arrayFlowerForBascet.set(action.payload, 1)}
+        case 'addProductInBascet':
+            return {...state, product: action.payload, ...state.arrayRelatedProductsForBascet.set(action.payload, 1)}
+        case 'deleteFlowerInBascet':
+            return {...state, ...state.arrayFlowerForBascet.delete(action.payload)}
+        case 'deleteProductInBascet': 
+            return {...state, ...state.arrayRelatedProductsForBascet.delete(action.payload)}
+        case 'addOneFlowerCount':
+            const temp1 = state.arrayFlowerForBascet.get(action.payload);
+            state.arrayFlowerForBascet.set(action.payload, temp1 + 1);
+            return {...state}
+        case 'deleteOneFlowerCount':
+            const temp2 = state.arrayFlowerForBascet.get(action.payload)
+            state.arrayFlowerForBascet.set(action.payload, temp2 - 1)
+            return {...state}
+        case 'addOneProductCount':
+            const temp3 = state.arrayRelatedProductsForBascet.get(action.payload);
+            state.arrayRelatedProductsForBascet.set(action.payload, temp3 + 1);
+            return {...state}
+        case 'deleteOneProductCount':
+            const temp4 = state.arrayRelatedProductsForBascet.get(action.payload)
+            state.arrayRelatedProductsForBascet.set(action.payload, temp4 - 1)
+            return {...state}
+        case 'deleteBascet':
+            return {...state, ...state.arrayFlowerForBascet.clear(), ...state.arrayRelatedProductsForBascet.clear()}
+        default:
+            return {...state}
     }
-    if (action.type == 'getFlower') {
-        return {...state};
-    }
-    if (action.type == 'addFlowerInBascet') {
-        return {...state, product: action.payload, ...state.arrayFlowerForBascet.set(action.payload, 1)}
-    }
-    if (action.type == 'addProductInBascet') {
-        return {...state, product: action.payload, ...state.arrayRelatedProductsForBascet.set(action.payload, 1)}
-    }
-    if (action.type == 'deleteFlowerInBascet') {
-        //state.arrayFlowerForBascet = state.arrayFlowerForBascet.filter(x => x != action.payload)
-        state.arrayFlowerForBascet.delete(action.payload)
-        return {...state}
-    }
-    if (action.type == 'deleteProductInBascet') {
-        return {...state, ...state.arrayRelatedProductsForBascet.delete(action.payload)}
-    }
-    if (action.type == 'addOneFlowerCount') {
-        const temp = state.arrayFlowerForBascet.get(action.payload);
-        state.arrayFlowerForBascet.set(action.payload, temp + 1);
-        return {...state}
-    }
-    if (action.type == 'deleteOneFlowerCount') {
-        const temp = state.arrayFlowerForBascet.get(action.payload)
-        state.arrayFlowerForBascet.set(action.payload, temp - 1)
-        return {...state}
-    }
-    if (action.type == 'addOneProductCount') {
-        const temp = state.arrayRelatedProductsForBascet.get(action.payload);
-        state.arrayRelatedProductsForBascet.set(action.payload, temp + 1);
-        return {...state}
-    }
-    if (action.type == 'deleteOneProductCount') {
-        const temp = state.arrayRelatedProductsForBascet.get(action.payload)
-        state.arrayRelatedProductsForBascet.set(action.payload, temp - 1)
-        return {...state}
-    }
-    if (action.type == 'deleteBascet') {
-        return {...state, ...state.arrayFlowerForBascet.clear(), ...state.arrayRelatedProductsForBascet.clear()}
-    }
-    return {...state};
-    
 }

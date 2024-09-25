@@ -28,4 +28,12 @@
     font-family: 'Inter';
     font-size: 20px;
     color: #550073;
+    
+}
+.button-about-us:hover {
+    background-color: #ffc402;
+    transition: 0.7s;
+}
+.aboutus-butt-in-info {
+    text-decoration: none;
 }
