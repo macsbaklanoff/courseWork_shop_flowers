@@ -179,6 +179,13 @@ function Bascet() {
                 }
             </div>
             {!emptyBascet && <div className='bascet-last'>
+                <button className='button-clear-bascet' onClick={() => {
+                    dispatch(deleteBascet())
+                    setYourBascet("Ваша корзина пуста, выберите что то из каталогов и вернитесь на эту страницу")
+                    setYourFlowers('')
+                    setYourRelatedProducts('')
+                    setEmptyBascet(true);
+                }}>Очистить корзину</button>
                         <div>
                             <h2 className='text-bascet-last'>Итого:</h2>
                          </div>
