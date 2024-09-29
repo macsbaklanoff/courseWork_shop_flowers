@@ -31,8 +31,6 @@ const getTableRelatedProducts = async () => {
     dataTableRelatedProducts = await connectForFlowers.query('SELECT * FROM "Товар";')
 }
 
-
-
 app.get('/getFlowers', (req, res) => {
     getTalbeFlowers()
     res.json(dataTableFlowers.rows)

@@ -104,6 +104,26 @@ function Bascet() {
         
     }, [arrayFlowerForBascetKeys, arrayRelatedProductForBascetKeys])
 
+    const check_telephone_number = (telephone) => {
+        const regex = /^((\+7|7|8)+([0-9]){10})$/
+        if (!regex.test(telephone)) {
+            alert("Проверьте правильность заполнения номера телефона!")
+        }
+    }
+
+    const check_Name = (firstNameClient,secondNameClient, threeNameClient ) => {
+        var nameRegex = /^[а-яA-Я]+$/;
+        if (!nameRegex.test(secondNameClient)) {
+            alert('Проверьте заполнение фамилии!');
+        }
+        if (!nameRegex.test(firstNameClient)) {
+            alert('Проверьте заполнение имени!');
+        }
+        if (!nameRegex.test(threeNameClient)) {
+            alert('Проверьте заполнение отчества!');
+        }
+    }
+
     const createOnOrder = () => {
         if (firstNameClient == '' || secondNameClient == '' || threeNameClient == '' || (methodDelivery == 'Доставка по адресу' && adressClient == '')) {
             alert("Проверьте заполненные поля!");
@@ -119,6 +139,8 @@ function Bascet() {
             telephone: telephone,
             adressClient: adressClient != '' ? adressClient : ''
         }
+        check_Name(firstNameClient, secondNameClient, threeNameClient)
+        check_telephone_number(telephone)
         dispatch(deleteBascet());
         orderToBack(objectForBackend)
         setEmptyBascet(true)
