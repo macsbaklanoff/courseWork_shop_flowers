@@ -108,28 +108,29 @@ function Bascet() {
         const regex = /^((\+7|7|8)+([0-9]){10})$/
         if (!regex.test(telephone)) {
             alert("Проверьте правильность заполнения номера телефона!")
+            return false;
         }
+        return true;
     }
 
     const check_Name = (firstNameClient,secondNameClient, threeNameClient ) => {
         var nameRegex = /^[а-яA-Я]+$/;
         if (!nameRegex.test(secondNameClient)) {
             alert('Проверьте заполнение фамилии!');
+            return false;
         }
         if (!nameRegex.test(firstNameClient)) {
             alert('Проверьте заполнение имени!');
+            return false;
         }
         if (!nameRegex.test(threeNameClient)) {
             alert('Проверьте заполнение отчества!');
+            return false;
         }
+        return true;
     }
 
     const createOnOrder = () => {
-        if (firstNameClient == '' || secondNameClient == '' || threeNameClient == '' || (methodDelivery == 'Доставка по адресу' && adressClient == '')) {
-            alert("Проверьте заполненные поля!");
-            return;
-        }
-
         const objectForBackend = {
             arrayFlowerForBascetMap: [Array.from(arrayFlowerForBascetMap.keys()), Array.from(arrayFlowerForBascetMap.values())],
             arrayRelatedProductForBascetMap: [Array.from(arrayRelatedProductForBascetMap.keys()), Array.from(arrayRelatedProductForBascetMap.values())],
@@ -139,8 +140,8 @@ function Bascet() {
             telephone: telephone,
             adressClient: adressClient != '' ? adressClient : ''
         }
-        check_Name(firstNameClient, secondNameClient, threeNameClient)
-        check_telephone_number(telephone)
+        if (!check_Name(firstNameClient, secondNameClient, threeNameClient) || !check_telephone_number(telephone)) return;
+        
         dispatch(deleteBascet());
         orderToBack(objectForBackend)
         setEmptyBascet(true)
@@ -248,10 +249,10 @@ function Bascet() {
                         </datalist>
                     </div>
                     <div className='order-right'>
-                        <input onChange={handleInputSecondName} className = 'input-element-one'></input>
-                        <input onChange={handleInputFirstName} className='input-element'></input>
-                        <input onChange={handleInputThreeName} className='input-element'></input>
-                        <input onChange={handleInputTelephone} className='input-element'></input>
+                        <input placeholder = {secondNameClient} onChange={handleInputSecondName} className = 'input-element-one'></input>
+                        <input placeholder = {firstNameClient} onChange={handleInputFirstName} className='input-element'></input>
+                        <input placeholder = {threeNameClient} onChange={handleInputThreeName} className='input-element'></input>
+                        <input placeholder = {telephone} onChange={handleInputTelephone} className='input-element'></input>
                         <input 
                         list = 'datalist'
                         onChange={handleInputChangeDelivery}                    
@@ -259,7 +260,7 @@ function Bascet() {
                         className='input-element'
                         ></input>
                         {
-                            (methodDelivery == 'Доставка по адресу')  && <input onChange={handleInputAdress} className='input-element'></input>
+                            (methodDelivery == 'Доставка по адресу')  && <input placeholder = {adressClient} onChange={handleInputAdress} className='input-element'></input>
                         }
                         {
                             (methodDelivery == 'Доставка по адресу' || methodDelivery == 'Самовывоз') && <button className='create-an-order' onClick={createOnOrder}>Оформить заказ</button>

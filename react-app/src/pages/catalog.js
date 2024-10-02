@@ -51,6 +51,7 @@ function Catalog() {
                 onChange={changeInputFlower}
                 ></input>
             </div>
+            {console.log(dataFlowers)}
             <div className='main-app-flowers'>
                 {   
                     dataFlowers && dataFlowers.map(flower => (
@@ -65,7 +66,10 @@ function Catalog() {
                                 
                             }
                         }>
-                            <Link to = "/product" className = 'button-buy-in-main-content-catalog' onClick={() => {dispatch(setFlower(flower))}}>{containsFlower(arrayFlowerForBascetMap, flower) ? 'В корзине' : "Купить"}</Link>
+                            <Link to = "/product" className = 'button-buy-in-main-content-catalog' 
+                            onClick={() => {dispatch(setFlower(flower))}}>
+                                {containsFlower(arrayFlowerForBascetMap, flower) ? 'В корзине' : "Купить"}
+                            </Link>
                         </div>
                      </div>   
                     ))
