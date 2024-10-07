@@ -130,6 +130,14 @@ function Bascet() {
         return true;
     }
 
+    const check_adress = () => {
+        if (methodDelivery == 'Доставка по адресу' && adressClient=='') {
+            alert("Заполните адрес!")
+            return false;
+        }
+        else return true;
+    }
+
     const createOnOrder = () => {
         const objectForBackend = {
             arrayFlowerForBascetMap: [Array.from(arrayFlowerForBascetMap.keys()), Array.from(arrayFlowerForBascetMap.values())],
@@ -140,8 +148,7 @@ function Bascet() {
             telephone: telephone,
             adressClient: adressClient != '' ? adressClient : ''
         }
-        if (!check_Name(firstNameClient, secondNameClient, threeNameClient) || !check_telephone_number(telephone)) return;
-        
+        if (!check_Name(firstNameClient, secondNameClient, threeNameClient) || !check_telephone_number(telephone) || !check_adress()) return;
         dispatch(deleteBascet());
         orderToBack(objectForBackend)
         setEmptyBascet(true)

@@ -9,3 +9,23 @@
 8	Малиновый Пудинг	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/9b/b7/_ee2ca5d54e6565ef0033a27ac450/800x800/647d9090ac409.jpg	5590	5
 9	Облако из гортензии	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/43/products/1f/54/_f9c45c9ec7dfb61afd1c095cb9a7/800x800/6666e79a4532e.jpg	7340	7
 10	51 Белая Роза	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/iflorist/product/O/V/_dPZ3A4SWxNeDhsZ2pKd0RLVFUyVHprYnliVjdxSGo1eE42bFVlOE9FZTFOYnJYbDNoRktYZStLQUs2OG13a3MyOG5NQkF1aXZCWXNxZlRhTWZtcXhYVk5oaEg1UXpyVDRQdTFDRFBad0NlOWg5YVdobTlOSUdYenF2aWVLTTB3Um1KaVhoQlpHbzZBNE5KdG10T0pBPT0=/800x800/img.jpg	15600	1
+11	Исландия	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/e7/28/_fdc85257245e49bfb3c3e711940d/800x800/646cabc2cab38.jpg	7612	10
+12	Королева Виктория	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/ed/92/_65452529e0383d8c2eaf61d64881/800x800/64a6a7dc79334.jpg	31405	4
+13	Грэтта	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/869/products/72/49/_e323f4598de86ac55a20e3076ba1/800x800/66d85c91199d4.jpg	5005	2
+14	Воздушный Зефир	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/content/bouquet/56/04/_583c1a3f9246364ae41af803a912/800x800/63c6793dac995.jpg	10637	2
+15	Страстные Розы	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/47/products/74447/81/27/_c4bffc84dfcfb4d87efbe656ce2f/800x800/66e0295a78780.png	5049	21
+16	Пионы Мисти Баблс	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/2240/95/35/_406ceeec8a3f871b3139a19e66fe/800x800/66b37f67e0b52.jpeg	6485	12
+17	Южный Бриз	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/43/products/41/08/_e7d4ba7fe756d2b62ab1a713aa20/800x800/6666e4d32a80f.jpg	7049	10
+18	Розы Латте	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/43/products/42/b3/_394dcb0b483a7ea637b7e8c6cd2b/800x800/6666e6e62b827.jpg	16654	3
+19	Магические Герберы	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/43/products/13/62/_d30672aa2a92c6fe3a66137fbedf/800x800/6666e723ab031.jpg	6974	5
+20	Альстромерия в корзине	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/a9/2d/_43d23fff95cd4258f965ce3fd245/800x800/66670b01acc21.jpg	54461	11
+21	15 Белых Роз	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/fd/0a/_eb8dc6c8bdd390540c04f6f03693/800x800/66670d291a94e.jpg	6292	12
+22	25 Кустовых Роз	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/7b/3f/_4dfb69c09340215db2941d753b95/800x800/66670d395dd91.jpg	14124	20
+23	51 Кустовая Хризантема	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/6b/71/_0a083e160ec054e4daef1f800390/800x800/66670cebe420a.jpg	30987	21
+24	21 Ирис	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/17/4c/_3db8c649462b4684d588d4607505/800x800/66670c469fa99.jpg	5869	20
+25	101 Красная Роза	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/af/50/_0a0f130760e88f1518ff2dd98a0e/800x800/66670c8e35f34.jpg	39133	30
+26	3 Белых Розы	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/46/5a/_24a241f279f98613fd441a6db81b/800x800/66670c7451550.jpg	2156	11
+27	Ирисы и Тюльпаны	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/e7/f7/_561463e7b9dabb590cbb87a1868f/800x800/66670c4cc0585.jpg	56117	3
+28	Микс из Роз с Лазиантусом	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/90/a2/_8888bec0d8b9676afbd95056c513/800x800/66670bbeaabf1.jpg	25377	23
+29	Эустома Follow Me	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/3d/b3/_2fdd8c4c3e5bccfc9221cc1cf102/800x800/66670b986247a.jpg	9768	12
+30	Коробка из Орхидеи	https://storage.florist.ru/cdn-cgi/image/format=avif/f/get/supplier/48/products/fc/d7/_3acbaa89e4a3ac547c6ebeae4928/800x800/66670ae4726b4.jpg	8767	5
